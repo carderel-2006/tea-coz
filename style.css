@@ -1,0 +1,121 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding-top: 69px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Header fixe */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 69px;
+  background-color: black;
+  border-bottom: 1px solid seashell;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 10;
+}
+header img { height: 50px; }
+nav a {
+  color: seashell;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+/* Mission */
+#mission {
+  width: 1200px;
+  max-width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  background: url("/2.jpg") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mission h2, #mission h4 { 
+  margin:0px; 
+  background-color: black;
+}
+
+/* Tea of the Month */
+#featured {
+  width: 1000px;
+  max-width: 100%;
+  margin: 40px auto;
+}
+.teas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tea { width: 300px; margin: 0 0 20px; }
+.tea img {
+  display: block;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  padding: 30px;
+  margin: 10px;
+}
+.tea p { margin: 10px 0 0; font-weight: bold; }
+
+/* Locations */
+#locations {
+  width: 1200px;
+  max-width: 100%;
+  height: 500px;
+  margin: 0 auto;
+  background: url("/7.jpg") center / cover no-repeat;
+}
+#locations h2 { margin: 0 0 15px; padding-top: 70px; }
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.card {
+  width: 300px;
+  background-color: black;
+  opacity: 1;
+  padding: 10px;
+}
+.card h3 { margin: 10px 0; }
+.card p { margin: 20px 0; }
+
+/* Footer */
+footer { background-color: black; }
+.contact { height: 200px; }
+.contact h4, .contact h5 { margin: 20px 0; }
+.copyright {
+  text-align: left;
+  padding: 0 20px 20px;
+  font-weight: bold;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  body { font-size: 16px; }
+
+  header { flex-direction: column; height: auto; padding: 10px; }
+  nav a { margin: 0 8px; }
+  body { padding-top: 110px; }
+
+  #mission { height: 450px; padding: 0 15px; }
+
+  .cards { flex-direction: column; align-items: center; gap: 15px; }
+  #locations { height: auto; padding-bottom: 20px; }
+  #locations h2 { padding-top: 30px; }
+
+  .tea, .tea img { width: 100%; max-width: 300px; }
+}
